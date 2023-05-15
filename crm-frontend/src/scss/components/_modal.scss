@@ -1,0 +1,206 @@
+.graph-modal__container {
+  padding: 0;
+  width: 450px;
+  border-radius: 0;
+}
+
+.graph-modal__surname {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.graph-modal__name {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.graph-modal__lastname {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
+.graph-modal__container-delete {
+  height: 215px;
+}
+
+.graph-modal__close {
+  right: 15px;
+  top: 15px;
+  width: 30px;
+  height: 30px;
+  background-image: url('../img/svg/close-modal.svg');
+  transition: transform .3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.5, 1.5);
+  }
+}
+
+.graph-modal__header {
+  display: inline-block;
+  padding-top: 24px;
+  padding-left: 30px;
+  padding-right: 10px;
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #333333;
+
+  &-delete {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+}
+
+.correct-id {
+  font-size: 12px;
+  line-height: 16px;
+  color: #B0B0B0;
+}
+
+.graph-modal__descr {
+  margin: 0 auto 25px auto;
+  max-width: 275px;
+  font-size: 14px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #333333;
+}
+
+.form__label::after {
+  content: '*';
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.form__label {
+  position: relative;
+  display: inline-block;
+  width: max-content;
+  padding-left: 30px;
+  padding-right: 8px;
+  font-size: 10px;
+  line-height: 14px;
+  color: #B0B0B0;
+}
+.form__label::after {
+  color: var(--violet-default);
+}
+
+.form__input {
+  padding-bottom: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333333;
+  border-bottom: 1px solid #C8C5D1;
+  outline: none;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #B0B0B0;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &:last-child {
+    margin-bottom: 25px;
+  }
+  &:focus-visible {
+    border-bottom: 1px solid var(--red-default);
+  }
+
+  &:hover {
+    border-bottom: 1px solid var(--red-default);
+  }
+}
+
+
+.form__btn-addContacts {
+  margin: 0 auto 0 auto;
+  padding: 8px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-color: #f7f5fc;
+  color: #000000;
+
+  svg {
+    margin-right: 4px;
+  }
+
+  &:focus-visible {
+    color: var(--violet-default);
+    outline: none;
+  }
+
+  &:hover {
+    color: var(--violet-default);
+  }
+
+}
+
+.form__btn-save {
+  padding: 12.5px 35px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+  background-color: var(--violet-default);
+  transition: background-color .3s ease-in-out;
+
+  &:focus-visible {
+    background-color: var(--violet-hover);
+    outline: 1px solid var(--violet-hover);
+  }
+
+  &:hover {
+    background-color: var(--violet-hover);
+  }
+
+  &:active {
+    background-color: var(--violet-default-dark);
+  }
+}
+
+.form__btn-cansel {
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  border-bottom: 1px solid #333333;
+  color: #333333;
+  transition: color .3s ease-in-out, transform .3s ease-in-out, border .3s ease-in-out;
+
+  &:focus-visible {
+    color: var(--red-default);
+    border-bottom: 1px solid var(--red-default);
+    outline: none;
+    transform: scale(1.1, 1.1);
+  }
+
+  &:hover {
+    color: var(--red-default);
+    border-bottom: 1px solid var(--red-default);
+    transform: scale(1.1, 1.1);
+  }
+
+  &:active {
+    color: var(--red-default);
+    border-bottom: 1px solid var(--red-default);
+  }
+}

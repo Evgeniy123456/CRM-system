@@ -1,0 +1,71 @@
+.form-contacts {
+  margin: 0 30px 15px 30px;
+  height: 37px;
+  border: 1px solid #C8C5D1;
+  transition: all .4s ease-in-out;
+
+  &__input {
+    padding: 0 15px;
+    width: 240px ;
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+    background-color: #f7f5fc;
+    border: 1px solid #C8C5D1;
+    outline: none;
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 19px;
+      color: #B0B0B0;
+      transition: color .3s ease-in-out;
+
+    }
+
+    &:focus::placeholder {
+      color: #333333;
+    }
+
+    &:hover::placeholder {
+      color: #333333;
+    }
+  }
+
+  &__btn {
+    width: 27px;
+    background-color: #E7E5EB;
+    border: 1px solid #C8C5D1;
+    background-image: url('../img/btn-cancel-grey.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all .3s ease-in-out;
+
+    &:focus-visible {
+      background-image: url('../img/cancel-red.svg');
+      outline: 1px solid var(--red-default);
+    }
+
+    &:hover {
+      background-image: url('../img/cancel-red.svg');
+      outline: 1px solid var(--red-default);
+      transform: scale(1.05, 1);
+    }
+
+    &:active {
+      background-image: url('../img/cancel-red.svg');
+      outline: 1px solid var(--red-default);
+    }
+  }
+
+}
+
+.form__btn-addContacts {
+}
+
+.graph-modal__btn-block {
+  margin-bottom: 25px;
+  width: 100%;
+  background-color: #f7f5fc;
+  transition: all .4s ease-in-out;
+}

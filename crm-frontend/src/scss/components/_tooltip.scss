@@ -1,0 +1,65 @@
+.tooltip {
+  position: relative;
+  // width: 16px;
+  // height: 16px;
+  cursor: pointer;
+}
+
+.tooltip::after {
+  content: attr(data-text);
+  position: absolute;
+  padding: 8px 17px;
+  width: max-content;
+  height: max-content;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+  background-color: #333;
+  visibility: hidden;
+  z-index: 10;
+}
+
+//расположение тултипа снизу
+.tooltip::after {
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+//расположение тултипа сверху
+// .tooltip::after {
+//   bottom: calc(100% + 6px);
+//   left: 50%;
+//   transform: translateX(-50%);
+// }
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  visibility: hidden;
+}
+
+//стрелка смотрит вверх
+.tooltip::before {
+  top: calc(100% + 2px);
+  border-width: 0 6px 6px 6px;
+  border-color: transparent transparent #333 transparent;
+}
+
+//стрелка смотрит вниз
+.tooltip::before {
+  // bottom: calc(100% + 2px);
+  // border-width: 6px 6px 0 6px;
+  // border-color: #333 transparent transparent transparent;
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+}

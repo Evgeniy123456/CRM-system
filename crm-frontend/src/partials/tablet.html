@@ -1,0 +1,197 @@
+<section  class="tablet">
+  <div class="container">
+    <div class="tablet__block">
+
+      <div class="tablet__header">Клиенты</div>
+      <!-- таблица  -->
+      <div class="tablet__table" id="table">
+        <!-- шапка таблицы с сортировкой  -->
+        <ul class="tablet__head list-reset d-flex jf-start" id="tabletHead">
+
+          <li class="tablet__head--id">
+            ID
+            <svg class="arrow-id" width="12" height="12" fill="#9873FF">
+              <use xlink:href="img/sprite.svg#arrow-id"></use>
+            </svg>
+          </li>
+
+          <li class="tablet__head--fio">Фамилия Имя Отчество
+            <p>
+              <svg class="arrow-fio" width="12" height="12" fill="#9873FF">
+                <use xlink:href="img/sprite.svg#arrow-id"></use>
+              </svg>
+              А-Я
+            </p>
+          </li>
+
+          <li class="tablet__head--create">
+            Дата и время создания
+            <svg class="arrow-create" width="12" height="12" fill="#9873FF">
+              <use xlink:href="img/sprite.svg#arrow-id"></use>
+            </svg>
+          </li>
+
+          <li class="tablet__head--correct">
+            Последние изменения
+            <svg class="arrow-correct" width="12" height="12" fill="#9873FF">
+              <use xlink:href="img/sprite.svg#arrow-id"></use>
+            </svg>
+          </li>
+
+          <li class="tablet__head--contacts">Контакты</li>
+
+          <li class="tablet__head--action">Действия</li>
+
+        </ul>
+        <!-- тело таблицы (сюда будут добавляться клиенты) -->
+        <div class="tablet__body" id="tabletBody">
+          <div class="loader">
+            <img src="img/loader.webp" alt="Загрузка...">
+          </div>
+        </div>
+
+      </div>
+      <!-- кнопка добавления клиента -->
+      <div class="d-flex al-i-center jf-center">
+
+        <button class="tablet__btn btn-reset" id="tabletBtn" data-graph-path="modalAddClients">
+          <svg class="" width="22" height="16" fill="#9873FF">
+            <use xlink:href="img/sprite.svg#add-clients"></use>
+          </svg>
+          Добавить клиента
+        </button>
+
+      </div>
+
+      <!-- модальные окна -->
+      <div class="graph-modal">
+
+        <!-- модальное окно добавления нового клиента -->
+        <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modalAddClients">
+          <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="graph-modal__content">
+            <h2 class="graph-modal__header">Новый клиент</h2>
+
+            <form action="#" class="form d-flex fl-dr-col" id="formAddNewClients">
+              <!-- <label class="form__label d-flex fl-dr-col"> -->
+                <input
+                  type="text"
+                  name="Имя"
+                  class="graph-modal__surname input-reset form__input"
+                  minlength="3"
+                  maxlength="15"
+                  placeholder="Фамилия*"
+                  required
+                >
+                <input
+                  type="text"
+                  name="Фамилия"
+                  class="graph-modal__name input-reset form__input"
+                  minlength="3"
+                  maxlength="15"
+                  placeholder="Имя*"
+                  required
+                >
+                <input
+                  type="text"
+                  name="Отчество"
+                  class="graph-modal__lastname input-reset form__input"
+                  minlength="3"
+                  maxlength="15"
+                  placeholder="Отчество*"
+                  required
+                >
+              <!-- </label> -->
+
+              <div class="d-flex fl-dr-col al-i-center jf-center">
+                <div class="graph-modal__btn-block">
+                  <div class="graph-modal__btn-block1 d-flex fl-dr-col-rev"></div>
+                  <button class="btn-reset form__btn form__btn-addContacts" id="BtnAddContacts">
+                    <svg width="16" height="16" fill="#9873FF">
+                      <use xlink:href="img/sprite.svg#add-contacts"></use>
+                    </svg>
+                    Добавить контакт
+                  </button>
+                </div>
+                <button class="btn-reset form__btn form__btn-save" id="BtnSaveNewClients">Сохранить</button>
+                <button class="btn-reset form__btn form__btn-cansel" id="BtnCanselClients">Отменить</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+        <!-- модальное окно "Изменить данные"  -->
+        <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="correctInform">
+          <button class="btn-reset js-modal-close graph-modal__close graph-modal__close-correct" aria-label="Закрыть модальное окно"></button>
+          <div class="graph-modal__content">
+            <h2 class="graph-modal__header">Изменить данные</h2><span class="correct-id">ID: 121212</span>
+
+            <form action="#" class="form d-flex fl-dr-col" id="formAddNewClients">
+              <label class="form__label d-flex fl-dr-col">Фамилия</label>
+                <input
+                  type="text"
+                  name="Имя"
+                  class="graph-modal__surname graph-modal__surname-correct input-reset form__input"
+                  required
+                  minlength="3"
+                  maxlength="15"
+                >
+
+              <label class="form__label d-flex fl-dr-col">Имя</label>
+                <input
+                  type="text"
+                  name="Фамилия"
+                  class="graph-modal__name graph-modal__name-correct input-reset form__input"
+                  required
+                  minlength="3"
+                  maxlength="15"
+                >
+
+              <label class="form__label d-flex fl-dr-col">Отчество</label>
+                <input
+                  type="text"
+                  name="Отчество"
+                  class="graph-modal__lastname graph-modal__lastname-correct input-reset form__input"
+                  required
+                  minlength="3"
+                  maxlength="15"
+                >
+
+
+              <div class="d-flex fl-dr-col al-i-center jf-center">
+                <div class="graph-modal__btn-block graph-modal__btn-blockCorrect">
+                  <div class="graph-modal__btn-blockCorrect1 d-flex fl-dr-col-rev"></div>
+                  <button class="btn-reset form__btn form__btn-addContacts" id="BtnAddContactsCorrect">
+                    <svg width="16" height="16" fill="#9873FF">
+                      <use xlink:href="img/sprite.svg#add-contacts"></use>
+                    </svg>
+                    Добавить контакт
+                  </button>
+                </div>
+                <button class="btn-reset form__btn form__btn-save" id="BtnSaveCorrectClients">Сохранить</button>
+                <button class="btn-reset form__btn form__btn-cansel" id="BtnCanselClientsCorrect">Отменить</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+        <!-- модальное окно "Удалить клиента"  -->
+        <div class="graph-modal__container graph-modal__container-delete" id="myModalDelete" role="dialog" aria-modal="true" data-graph-target="deleteClients">
+          <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+          <div class="graph-modal__content d-flex jf-center fl-dr-col">
+
+            <h2 class="graph-modal__header graph-modal__header-delete">Удалить клиента</h2>
+            <p class="graph-modal__descr">Вы действительно хотите удалить данного клиента?</p>
+
+            <div class="d-flex fl-dr-col al-i-center jf-center">
+              <button class="btn-reset form__btn form__btn-save" id="BtnDeleteClients">Удалить</button>
+              <button class="btn-reset form__btn form__btn-cansel" id="BtnCanselClientsDelete">Отменить</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
